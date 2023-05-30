@@ -26,5 +26,11 @@ gfs_ds_max = gfs_ds_max.reindex(latitude=gfs_ds_max.latitude[::-1])
 t = gfs_ds_mean.t
 t.to_netcdf(root+"time_"+time+"/"+date+'/t_'+date+'.nc')
 
+u = gfs_ds_mean.u
+u.to_netcdf(root+"time_"+time+"/"+date+'/u_'+date+'.nc')
+
+v = gfs_ds_mean.v
+v.to_netcdf(root+"time_"+time+"/"+date+'/v_'+date+'.nc')
+
 q = gfs_ds_max.q
 q.to_netcdf(root+"time_"+time+"/"+date+'/q_'+date+'.nc')
