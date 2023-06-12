@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-for date in 20230318
+for date in 20230429 20230430
 
 do
 	dtime=00z
