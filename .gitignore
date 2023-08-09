@@ -7,3 +7,4 @@
 *.gif
 *.grb2
 *.ipynb_checkpoints*
+/Static_Features/estimation_data
