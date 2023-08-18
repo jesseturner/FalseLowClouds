@@ -7,4 +7,5 @@
 *.gif
 *.grb2
 *.ipynb_checkpoints*
+/Nighttime_Low_Cloud_Test/data
 /Static_Features/estimation_data
