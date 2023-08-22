@@ -7,8 +7,12 @@ import datetime
 import pickle
 
 abi_path = sys.argv[1]
-filename = sys.argv[2]
-nlct_path = sys.argv[3]
+nlct_path = sys.argv[2]
+
+path = abi_path[0:60]
+filename = abi_path[61:]
+print(path)
+print(filename)
 
 #--- Using full extent of GOES East
 
@@ -75,10 +79,11 @@ def get_xy_from_latlon(ds, lats, lons):
     
     return ((min(x), max(x)), (min(y), max(y)))
 
-def create_BTD(static_features_data, filename):
+def create_BTD(path, filename):
 
-    data_07 = xr.open_dataset(static_features_data+'/'+filename)
-    
+    data_07 = xr.open_dataset(abi_path)
+    #---seperate the path and filename    
+
     year = filename[27:31]
     jul_day = filename[31:34]
     h = filename[34:36]
@@ -93,11 +98,11 @@ def create_BTD(static_features_data, filename):
     subset_07 = ds_07.sel(x=slice(x1, x2), y=slice(y2, y1))
 
     #--- Search for corresponding Band 14 file:
-    files = os.listdir(static_features_data) 
+    files = os.listdir(path) 
     pattern = 'OR_ABI-L1b-RadF-M6C14*'+filename[27:38]+'*.nc'
     filename_14 = str(fnmatch.filter(files, pattern)[0])
 
-    data_14 = xr.open_dataset(static_features_data+'/'+filename_14)
+    data_14 = xr.open_dataset(path+'/'+filename_14)
 
     print('Processing 14 band for '+year+'-'+jul_day+' '+h+':'+m)
 
@@ -122,7 +127,7 @@ def create_BTD(static_features_data, filename):
 
 #--- Running the function to create the BTD xarray
 
-BTD = create_BTD(abi_path, filename)
+BTD = create_BTD(path, filename)
 
 #--- Creating the datetime string
 
