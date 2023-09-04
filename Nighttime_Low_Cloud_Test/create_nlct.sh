@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-date="20220914"
+date="20230901"
 abi_path="/home/jturner/false_low_clouds_2023/Static_Features"/$date
 
 for i in $abi_path/OR_ABI-L1b-RadF-M6C07*; do
