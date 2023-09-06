@@ -9,10 +9,12 @@ import pickle
 abi_path = sys.argv[1]
 nlct_path = sys.argv[2]
 
-path = abi_path[0:60]
-filename = abi_path[61:]
-print(path)
-print(filename)
+print(abi_path)
+
+path = abi_path[0:23]
+filename = abi_path[23:]
+#print(path)
+#print(filename)
 
 #--- Using full extent of GOES East
 
