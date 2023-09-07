@@ -1,8 +1,8 @@
 #! /usr/bin/bash
 
-date="20230417"
+date="20230427"
 time="0000" # hhmm
-julian="107"
+julian="117"
 
 local_destination="abi_data_temp/"$date
 remote_user="jturner"
@@ -19,6 +19,8 @@ echo "scp $remote_user@$remote_host:$remote_directory_07 $local_destination"
 
 echo "--- Retrieve ABI data from 14 band:"
 echo "scp $remote_user@$remote_host:$remote_directory_14 $local_destination" 
+
+echo "--- Edit date and run create_nlct.sh"
 
 echo "--- When finished, use this command to remove ABI data:"
 echo "rm -r $local_destination"
