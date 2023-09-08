@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-date="20230427"
+date="20230907"
 abi_path="abi_data_temp/$date"
 nlct_path="nlct_data/$date/"
 
