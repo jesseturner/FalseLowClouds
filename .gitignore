@@ -9,4 +9,6 @@
 *.ipynb_checkpoints*
 /Nighttime_Low_Cloud_Test/abi_data_temp
 /Nighttime_Low_Cloud_Test/nlct_data
+/ABI_Band_07/abi_data_temp
+/ABI_Band_07/band07_data
 /Static_Features/estimation_data
