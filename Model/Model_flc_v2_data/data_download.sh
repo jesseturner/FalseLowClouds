@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-for date in 20230911
+for date in 20230907
 
 do 
 
@@ -17,9 +17,9 @@ do
 
 	wget https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs."$date"/${dtime:0:2}/atmos/gfs.t"$dtime".pgrb2.0p25.f000 -P time_$dtime/$date
 
-	python data_download_convert.py $date $dtime
+	#python data_download_convert.py $date $dtime
 
-	rm time_$dtime/$date/gfs*
+	#rm time_$dtime/$date/gfs*
 
 	fi
 
