@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-for date in 20230907
+for date in 20230908
 
 do 
 
