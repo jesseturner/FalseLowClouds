@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 date="20230907"
-time="01" # hh
+time="04" # hh
 julian="250"
 
 local_destination="abi_data_temp/"$date
