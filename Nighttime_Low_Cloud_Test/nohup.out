@@ -1,0 +1,9 @@
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/jturner/.ssh/id_rsa): /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/jturner/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/usr/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+		(if you think this is a mistake, you may want to use -f option)
+
+longterm_instructions.sh: line 12: syntax error near unexpected token `julian=$(date -d "$date" +%j)'
+longterm_instructions.sh: line 12: `    julian=$(date -d "$date" +%j)'
