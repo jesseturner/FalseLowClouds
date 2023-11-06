@@ -1,8 +1,8 @@
 #! /usr/bin/bash
 
-date="20230727"
-time="00" # hh
-julian="208"
+date="20230908"
+time="01" # hh
+julian=$(date -d "$date" +%j)
 
 local_destination="abi_data_temp/"$date
 remote_user="jturner"
