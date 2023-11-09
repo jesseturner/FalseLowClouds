@@ -7,7 +7,7 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id $remote_user@$remote_host
 chmod 600 ~/.ssh/id_rsa
 
-for date in 20230919 20230920 20230921 20230922 20230923 20230924; do 
+for date in 20230925 20230926 20230927 20230928 20230929 20230930; do 
 
     julian=$(date -d "$date" +%j)
 
