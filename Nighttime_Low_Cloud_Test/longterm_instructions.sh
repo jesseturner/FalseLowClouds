@@ -7,7 +7,8 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id $remote_user@$remote_host
 chmod 600 ~/.ssh/id_rsa
 
-for date in 20230701 20230702 20230703 20230704 20230705 20230706 20230707 20230708 20230709 20230710 20230711 20230712 20230713 20230714 20230715; do 
+for date in 20230714; do 
+#20230716 20230717 20230718 20230719 20230720 20230721 20230722 20230723 20230724 20230726 20230727 20230728 20230729 20230730 20230731; do 
 
     julian=$(date -d "$date" +%j)
 
@@ -20,7 +21,6 @@ for date in 20230701 20230702 20230703 20230704 20230705 20230706 20230707 20230
     fi
     
     #--- Added zeros at the end for 'top of each hour'
-    #------ This seems be getting stuck in a loop, it runs the same time multiple times
     
     for time in "00" "01" "02" "03" "04" "05" "06" "07" "08"; do
          remote_directory_07="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C07_G16_s"${date:0:4}$julian$time"0"*

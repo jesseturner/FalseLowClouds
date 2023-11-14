@@ -9,7 +9,7 @@ import pickle
 abi_path = sys.argv[1]
 nlct_path = sys.argv[2]
 
-print(abi_path)
+#print(abi_path)
 
 path = abi_path[0:23]
 filename = abi_path[23:]
@@ -138,6 +138,7 @@ python_dt = datetime.datetime.utcfromtimestamp(dt * 1e-9)
 dt_str = python_dt.strftime("%Y_%m_%d_%HH_%MM")
 
 #--- Saving the file in /Nighttime_Low_Cloud_Test
+#------ For a specific region, add the directory name before the nlct_path
 
 file = open(nlct_path+"goes_e_ntlc_"+dt_str, 'wb')
 BTD_file = pickle.dump(BTD, file)
