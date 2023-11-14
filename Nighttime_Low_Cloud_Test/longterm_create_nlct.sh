@@ -1,7 +1,8 @@
 #! /usr/bin/bash
 date="$1"
 abi_path="abi_data_temp/$date"
-nlct_path="/mnt/data2/jturner/nlct_data/$date/"
+region="georges_bank/"
+nlct_path="/mnt/data2/jturner/nlct_data/$region$date/"
 
 if [ -d $nlct_path ]; then echo #"Success --- destination directory found for $date"
 else mkdir $nlct_path

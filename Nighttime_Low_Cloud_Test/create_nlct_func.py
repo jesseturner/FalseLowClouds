@@ -17,11 +17,17 @@ filename = abi_path[23:]
 #print(filename)
 
 #--- Using full extent of GOES East
+# min_lon = -180
+# min_lat = -90
+# max_lon = 0
+# max_lat = 90
 
-min_lon = -180
-min_lat = -90
-max_lon = 0
-max_lat = 90
+#--- Georges bank
+min_lon = -70.5
+min_lat = 39
+max_lon = -67
+max_lat = 43
+
 lats = (min_lat, max_lat)
 lons = (min_lon, max_lon)
 
@@ -138,7 +144,6 @@ python_dt = datetime.datetime.utcfromtimestamp(dt * 1e-9)
 dt_str = python_dt.strftime("%Y_%m_%d_%HH_%MM")
 
 #--- Saving the file in /Nighttime_Low_Cloud_Test
-#------ For a specific region, add the directory name before the nlct_path
 
 file = open(nlct_path+"goes_e_ntlc_"+dt_str, 'wb')
 BTD_file = pickle.dump(BTD, file)
