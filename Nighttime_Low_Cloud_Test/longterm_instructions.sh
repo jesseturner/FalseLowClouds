@@ -9,7 +9,7 @@ chmod 600 ~/.ssh/id_rsa
 
 #--- Date range to run the data:
 start_date="20230108"
-end_date="20230601"
+end_date="20231231"
 
 date=$(date -d "$start_date" +%Y%m%d)
 
