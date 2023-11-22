@@ -28,7 +28,7 @@ while [ "$date" -le "$(date -d "$end_date" +%Y%m%d)" ]; do
     
     #--- Added zeros at the end for 'top of each hour'
     
-    for time in "00" "01" "02" "03" "04" "05" "06" "07" "08"; do
+    for time in "00"; do
          remote_directory_07="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C07_G16_s"${date:0:4}$julian$time"0"*
          remote_directory_14="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C14_G16_s"${date:0:4}$julian$time"0"*
     

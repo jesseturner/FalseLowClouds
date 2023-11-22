@@ -23,10 +23,16 @@ filename = abi_path[23:]
 # max_lat = 90
 
 #--- Georges bank
-min_lon = -70.5
-min_lat = 39
-max_lon = -67
-max_lat = 43
+# min_lon = -70.5
+# min_lat = 39
+# max_lon = -67
+# max_lat = 43
+
+#--- Oaxaca
+min_lon = -109
+min_lat = 10
+max_lon = -81
+max_lat = 24
 
 lats = (min_lat, max_lat)
 lons = (min_lon, max_lon)
