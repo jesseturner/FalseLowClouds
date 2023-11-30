@@ -29,10 +29,17 @@ filename = abi_path[23:]
 # max_lat = 43
 
 #--- Oaxaca
-min_lon = -109
-min_lat = 10
-max_lon = -81
-max_lat = 24
+# min_lon = -109
+# min_lat = 10
+# max_lon = -81
+# max_lat = 24
+
+#---South America
+min_lon = -100
+min_lat = -58
+max_lon = -40
+max_lat = -15
+
 
 lats = (min_lat, max_lat)
 lons = (min_lon, max_lon)
