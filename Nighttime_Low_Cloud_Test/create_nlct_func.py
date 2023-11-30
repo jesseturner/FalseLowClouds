@@ -34,11 +34,17 @@ filename = abi_path[23:]
 # max_lon = -81
 # max_lat = 24
 
-#---South America
-min_lon = -100
+#---South America (too large)
+# min_lon = -100
+# min_lat = -58
+# max_lon = -40
+# max_lat = -15
+
+#---Falklands
+min_lon = -75
 min_lat = -58
-max_lon = -40
-max_lat = -15
+max_lon = -50
+max_lat = -35
 
 
 lats = (min_lat, max_lat)
