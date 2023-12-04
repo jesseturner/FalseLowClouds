@@ -1,9 +1,34 @@
-
 &INPUT
-  idatm=1
-  isat=0
-  wlinf=11
-  wlsup=11
-  wlinc=0.01
-  iout=1
+   isat=0,         !user defined wavelength range
+   wlinf=0.25,     !starting wavelength of 0.25 um
+   wlsup=4.0,      !ending wavelength of 4.0 um
+   wlinc=-0.01,    !wavelength increment is dL/L=.01
+
+   idatm=6,        !atmosphere: 6 is US standard
+   nf=3,           !use the MODTRAN3 solar spectrum
+
+   iday=90,        !day of the year
+   time=19,        !time in hours GMT
+   alat=39,        !latitude on Earth
+   alon=-77,       !longitude on Earth
+
+   isalb=6,        !if isalb=0, albedo=albcon; =6,vegetation
+   albcon=0.0,
+
+   uw=1.418,       !precipitable water vapor (-1 means use atmosphere); for US standard atmosphere, uw=1.418(g/cm2), uo3=0.349 (atm-cm)
+   uo3=0.349,      !total ozone (-1 means use atmosphere),
+   xco2=360,       !carbon dioxide concentration (ppmv)
+
+   zcloud=0.5,-1.0,!height range of cloud (0.5 to 1.0 km)
+   tcloud=0.0,1.0  !optical thickness of cloud layer.
+   nre=10.0        !effective radius in cloud layer (um)
+
+   iaer=0          !boundary layer aerosols(BLA); =0 no BLA
+   vis=20          !visibility(km) at 0.55 um.
+
+   zout=0,100,     !get output at the surface and top of atmosphere
+   iout=1,         !output mode for TOA and surface spectral fluxes
+   nstr=4,         !number of discrete ordinates in DISORT
 /
+
+! The above INPUT file says that, the model will be run for a clear atmosphere (US standard atmosphere) over Washington DC (lat=39, lon=-77) on 90th day of year at 19GMT, assuming the surface to be vegetation type, no aerosols, no clouds. This run output spectral fluxes for TOA and surface.
