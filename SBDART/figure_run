@@ -1,0 +1,28 @@
+#!/bin/bash
+
+root=figure/result_11um_293k
+
+# Remove existing output file
+rm -f $root
+echo "Running figure"
+
+for uw in 0.75 1.0 1.25 1.5 1.75 2.0; do
+echo "
+ &INPUT
+   wlinf=11
+   wlsup=11
+   idatm=6
+   nf=3
+   iday=90
+   time=19
+   alat=39
+   alon=-77
+   uw = $uw
+   btemp = 293
+   zout=0,100
+   iout=1
+ /" > INPUT
+
+./sbdart >> $root
+
+done
