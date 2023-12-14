@@ -15,7 +15,9 @@ for temp in 270 275 280 285 290 295 300; do
            idatm=6
            alat=39
            alon=-77
-           sza=95       !solar zenith angle set to nighttime
+           sza=95      !solar zenith angle: below horizon, nighttime
+           isalb=0     !surface albedo: uniform, set by albcon
+           albcon=0.05    !manually set albedo (isalb=0)
            uw = $uw
            btemp = $temp
            zout=0,100
