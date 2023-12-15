@@ -1,0 +1,24 @@
+#!/bin/bash
+
+root=profile/profile_SWIR
+rm -f $root
+echo "Running profile"
+
+echo "
+    &INPUT
+       wlinf=3.9,      !Lower WL limit: micrometers
+       wlsup=3.9,      !Upper WL limit: micrometers
+    
+       idatm=6,        !atmosphere: 6 is US standard
+       nf=3,           !use the MODTRAN3 solar spectrum
+    
+       iday=90,        !day of the year
+       time=19,        !time in hours GMT
+       alat=39,        !latitude on Earth
+       alon=-77,       !longitude on Earth
+    
+       zout=0,100      !bottom and top of altitude
+       iout=7
+/" > INPUT
+
+./sbdart >> $root

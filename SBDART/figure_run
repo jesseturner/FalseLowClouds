@@ -10,18 +10,18 @@ for temp in 270 275 280 285 290 295 300; do
 
         echo "
          &INPUT
-           wlinf=11
-           wlsup=11
-           idatm=6
-           alat=39
-           alon=-77
-           sza=95      !solar zenith angle: below horizon, nighttime
-           isalb=0     !surface albedo: uniform, set by albcon
-           albcon=0.05    !manually set albedo (isalb=0)
-           uw = $uw
-           btemp = $temp
-           zout=0,100
-           iout=1
+           wlinf=11    !Lower WL limit: micrometers
+           wlsup=11    !Upper WL limit: micrometers
+           idatm=6     !US standard atmosphere (default)
+           alat=41     !location: Georges Bank
+           alon=-68
+           sza=95         !solar zenith angle: below horizon, nighttime
+           isalb=0        !surface albedo: uniform, set by albcon
+           albcon=0.1    !manually set albedo (isalb=0)
+           uw = $uw       !variable precipitable water
+           btemp = $temp  !variable skin surface temperature
+           zout=0,100     !bottom and top of altitude
+           iout=1         !type of output
          /" > INPUT
 
     ./sbdart >> $root
