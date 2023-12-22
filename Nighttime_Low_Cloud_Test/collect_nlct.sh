@@ -7,9 +7,10 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id $remote_user@$remote_host
 chmod 600 ~/.ssh/id_rsa
 
-#--- Date range to run the data:
-start_date="20230101"
-end_date="20231127"
+#--- Date and time range to run the data:
+start_date="20220104"
+end_date="20221231"
+hours="06"
 
 date=$(date -d "$start_date" +%Y%m%d)
 
@@ -28,7 +29,7 @@ while [ "$date" -le "$(date -d "$end_date" +%Y%m%d)" ]; do
     
     #--- Added zeros at the end for 'top of each hour'
     
-    for time in "00"; do
+    for time in $hours; do
          remote_directory_07="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C07_G16_s"${date:0:4}$julian$time"0"*
          remote_directory_14="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C14_G16_s"${date:0:4}$julian$time"0"*
     
@@ -37,8 +38,8 @@ while [ "$date" -le "$(date -d "$end_date" +%Y%m%d)" ]; do
     
     done
     
-    chmod +x longterm_create_nlct.sh
-    ./longterm_create_nlct.sh "$date"
+    chmod +x collect_nlct_each.sh
+    ./collect_nlct_each.sh "$date"
     
     rm -r $local_destination
     

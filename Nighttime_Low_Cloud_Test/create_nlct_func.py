@@ -23,10 +23,10 @@ filename = abi_path[23:]
 # max_lat = 90
 
 #--- Georges bank
-# min_lon = -70.5
-# min_lat = 39
-# max_lon = -67
-# max_lat = 43
+min_lon = -70.5
+min_lat = 39
+max_lon = -67
+max_lat = 43
 
 #--- Oaxaca
 # min_lon = -109
@@ -41,10 +41,10 @@ filename = abi_path[23:]
 # max_lat = -15
 
 #---Falklands
-min_lon = -75
-min_lat = -58
-max_lon = -50
-max_lat = -35
+# min_lon = -75
+# min_lat = -58
+# max_lon = -50
+# max_lat = -35
 
 
 lats = (min_lat, max_lat)
@@ -163,9 +163,14 @@ python_dt = datetime.datetime.utcfromtimestamp(dt * 1e-9)
 dt_str = python_dt.strftime("%Y_%m_%d_%HH_%MM")
 
 #--- Saving the file in /Nighttime_Low_Cloud_Test
+#------ Saving in netcdf form, instead of pickling the xarray (doesn't work with updates)
 
-file = open(nlct_path+"goes_e_ntlc_"+dt_str, 'wb')
-BTD_file = pickle.dump(BTD, file)
-file.close()
+netcdf_path = nlct_path+"goes_e_ntlc_"+dt_str+".nc"
+
+if os.path.exists(netcdf_path):
+    os.remove(netcdf_path)
+    
+BTD.to_netcdf(netcdf_path)
+
 
 print('Success --- NLCT for '+dt_str+'  produced')

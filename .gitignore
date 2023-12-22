@@ -8,10 +8,12 @@
 *.grb2
 *.ipynb_checkpoints*
 /Nighttime_Low_Cloud_Test/abi_data_temp
-/Nighttime_Low_Cloud_Test/nlct_data
+/Nighttime_Low_Cloud_Test/nohup.out
 /ABI_Band_07/abi_data_temp
 /ABI_Band_07/band07_data
 /Static_Features/estimation_data
 /Model/Model_flc_v2_data/time_00z
 /Day_Night_Band/NasaWorldview_Imagery
 /SBDART/local_sbdart
+/modtran
+/Day_Night_Band/nasa-viirs

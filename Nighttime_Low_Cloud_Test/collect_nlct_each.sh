@@ -1,9 +1,10 @@
 #! /usr/bin/bash
-date="20230907"
+date="$1"
 abi_path="abi_data_temp/$date"
-nlct_path="nlct_data/$date/"
+region="georges_bank/"
+nlct_path="/mnt/data2/jturner/nlct_data/$region$date/"
 
-if [ -d $nlct_path ]; then echo "Success --- destination directory found"
+if [ -d $nlct_path ]; then echo #"Success --- destination directory found for $date"
 else mkdir $nlct_path
 fi
 
@@ -12,11 +13,8 @@ for i in $abi_path/OR_ABI-L1b-RadF-M6C07*; do
 	b07_path=$i
 
 	if [ -e $b07_path ]; then
-	echo "Success --- data found, proceeding"
 
 	python create_nlct_func.py $b07_path $nlct_path
-
-	else echo "Failure --- data not found"
 
 	fi
     
