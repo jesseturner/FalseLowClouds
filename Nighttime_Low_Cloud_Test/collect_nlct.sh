@@ -10,7 +10,7 @@ chmod 600 ~/.ssh/id_rsa
 #--- Date and time range to run the data:
 start_date="20220104"
 end_date="20221231"
-hours="06"
+hours="07"
 
 date=$(date -d "$start_date" +%Y%m%d)
 
@@ -32,7 +32,7 @@ while [ "$date" -le "$(date -d "$end_date" +%Y%m%d)" ]; do
     for time in $hours; do
          remote_directory_07="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C07_G16_s"${date:0:4}$julian$time"0"*
          remote_directory_14="/mnt/grb/goes16/"${date:0:4}/${date:0:4}_${date:4:2}_${date:6:2}_$julian"/abi/L1b/RadF/OR_ABI-L1b-RadF-M6C14_G16_s"${date:0:4}$julian$time"0"*
-    
+
         scp $remote_user@$remote_host:$remote_directory_07 $local_destination
         scp $remote_user@$remote_host:$remote_directory_14 $local_destination
     

@@ -1,11 +1,11 @@
 #! /usr/bin/bash
 date="$1"
 abi_path="abi_data_temp/$date"
-region="georges_bank/"
+region="oaxaca/"
 nlct_path="/mnt/data2/jturner/nlct_data/$region$date/"
 
-if [ -d $nlct_path ]; then echo #"Success --- destination directory found for $date"
-else mkdir $nlct_path
+if [ ! -d $nlct_path ]; then
+    mkdir $nlct_path
 fi
 
 for i in $abi_path/OR_ABI-L1b-RadF-M6C07*; do
