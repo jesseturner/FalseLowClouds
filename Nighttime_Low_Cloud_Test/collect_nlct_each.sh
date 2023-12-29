@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 date="$1"
 abi_path="abi_data_temp/$date"
-region="oaxaca/"
+region="gulf_stream/"
 nlct_path="/mnt/data2/jturner/nlct_data/$region$date/"
 
 if [ ! -d $nlct_path ]; then
