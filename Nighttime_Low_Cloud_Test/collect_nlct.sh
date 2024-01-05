@@ -8,8 +8,8 @@ ssh-copy-id $remote_user@$remote_host
 chmod 600 ~/.ssh/id_rsa
 
 #--- Date and time range to run the data:
-start_date="20230101"
-end_date="20231225"
+start_date="20231226"
+end_date="20231231"
 hours="06"
 
 date=$(date -d "$start_date" +%Y%m%d)
