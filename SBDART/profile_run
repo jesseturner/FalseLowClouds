@@ -10,13 +10,17 @@ echo "
        wlsup=11,      !Upper WL limit: micrometers
     
        idatm=6,        !atmosphere: 6 is US standard
-       nf=3,           !use the MODTRAN3 solar spectrum
+       nf=0,           !use the MODTRAN3 solar spectrum
+       uo3=0,       !ozone set to zero (US atms usually has ozone)
 
-       ZGRID1=.5       !Resolution at bottom of the grid (km)
-       ZGRID2=20       !Maximum step size at top of the grid (km)
-       NGRID=60        !Number of height steps
+       XCH4=0        !CH4 causes minor emission and BTD higher in the atmosphere
+       XN2O=0        !N20 causes emission and BTD higher in the atmosphere
+
+       ZGRID1=.25,      !Resolution at bottom of the grid (km)
+       ZGRID2=20,       !Maximum step size at top of the grid (km)
+       NGRID=60,        !Number of height steps
     
-       sza=120         !solar zenith angle: below horizon, nighttime
+       sza=120,         !solar zenith angle: below horizon, nighttime
        alat=41,        !latitude on Earth
        alon=-68,       !longitude on Earth
     

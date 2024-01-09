@@ -12,23 +12,39 @@ for temp in 270 275 280 285 290 295 300; do
          &INPUT
            wlinf=3.9   !Lower WL limit: micrometers
            wlsup=3.9   !Upper WL limit: micrometers
-           idatm=4     !US standard atmosphere (default, add a '-' to output atms.dat file)
+           nf=0       !Solar Spectrum: spectrally uniform
+           isat=0     !Exact wavelength, no range
+           idatm=6     !US standard atmosphere (default, add a '-' to output atms.dat file)
            !idatm=0     !Using atms.dat to set atmosphere ("clean")
 
            ZGRID1=.5    !Resolution at bottom of the grid (km)
            ZGRID2=20    !Maximum step size at top of the grid (km)
            NGRID=60     !Number of height steps
 
-           !uo3=0       !ozone set to zero (US atms usually has ozone)
-           alat=41     !location: Georges Bank
+           !XN2=0
+           !XO2=0
+           !XCO2=0
+           XCH4=0      !CH4 causes minor emission and BTD higher in the atmosphere
+           XN2O=0      !N20 causes emission and BTD higher in the atmosphere
+            !XCO=0
+            !XNH3=0
+            !XSO2=0
+            !XNO=0
+            !XHNO3=0
+            !XNO2=0
+
+           uo3=0       !ozone set to zero (US atms usually has ozone)
+           alat=41      !location: Georges Bank
            alon=-68
-           sza=120         !solar zenith angle: below horizon, nighttime
+           sza=180         !solar zenith angle: below horizon, nighttime
+           iday=0          !day of year: not set, overrides sza
            !isalb=0        !surface albedo: uniform, set by albcon
-           albcon=0.0    !manually set albedo (isalb=0)
+           albcon=0.0     !manually set albedo (isalb=0)
            nothrm=-1      !thermal emissions turned on for IR
            uw = $uw       !integrated variable precipitable water (g/cm2)
            btemp = $temp  !variable skin surface temperature
-           zout=0,100     !bottom and top of altitude
+           temis=1        !emissivity of the top layer
+           zout=0,10     !bottom and top of altitude
            iout=1         !type of output
          /" > INPUT
 
