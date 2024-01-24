@@ -6,7 +6,7 @@ CMF 2    3    1    1    2    2    2    2    2    2    1    0   -1   0.000 LAMBER
      0.94000   100.00000    80.00000   475.81784     4.15336  6371.23000  0        104.07752     0.00000
   -99  -99  -99  -99
  -99.00000 -99.00000 -99.00000 -99.00000 -99.00000 -99.00000 -99.00000 -99.00000
-     815.0    1280.0       1.0       1.0TM $      MSRA
+     815.0    1280.0       1.0       1.0RW $      MSRA
     1   0    1.000  0    1.000  0    1.000
  FREQ     ALT     TOTAL    DELTA   UP-DN-DIR   THRML_UP   THRML_DN  THRML_SRC  THRML_SUM   SOLAR_UP   SOLAR_DN  SOLAR_SRC  SOLAR_SUM
 (CM-1)   (KM)     TRANS    TRANS (                                           W CM-2 / CM-1                                         )
