@@ -21,10 +21,10 @@ sst_ds = sst_ds.squeeze()
 sst_ds.sst.values = sst_ds.sst.values+273.15
 
 #---Georges Bank
-min_lon = -71.5
-min_lat = 37
-max_lon = -64
-max_lat = 42.5
+min_lon = -76
+min_lat = 36
+max_lon = -61
+max_lat = 45
 
 #---Filter to the region of interest
 sst_ds = sst_ds.sel(lat=slice(min_lat,max_lat), lon=slice(min_lon+360,max_lon+360))

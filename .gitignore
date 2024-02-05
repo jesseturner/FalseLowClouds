@@ -9,8 +9,8 @@
 *.ipynb_checkpoints*
 /Nighttime_Low_Cloud_Test/abi_data_temp
 /Nighttime_Low_Cloud_Test/nohup.out
-/ABI_Band_07/abi_data_temp
-/ABI_Band_07/band07_data
+/ABI_Band/abi_data_temp
+/ABI_Band/band07_data
 /Static_Features/estimation_data
 /Model/Model_flc_v2_data/time_00z
 /Day_Night_Band/NasaWorldview_Imagery

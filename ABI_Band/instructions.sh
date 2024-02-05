@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
-date="20230908"
-time="01" # hh
+date="20230907"
+time="00" # hh
 julian=$(date -d "$date" +%j)
 
 local_destination="abi_data_temp/"$date

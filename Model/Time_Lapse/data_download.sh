@@ -1,10 +1,10 @@
 #! /usr/bin/bash
 
-for date in 20230911
+for date in 20230907
 
 do 
 
-	dtime=00z
+	dtime=06z
 
 	if [ -d time_$dtime/$date ]; then
 	echo "directory exists"
