@@ -21,7 +21,7 @@ do
 
 	python data_download_convert_v2.py $date $dtime
 
-	rm -r time_$dtime/$date
+	#rm -r time_$dtime/$date
 
 	fi
 
