@@ -6,6 +6,7 @@
 *.idx
 *.gif
 *.grb2
+*.npy
 *.ipynb_checkpoints*
 /Nighttime_Low_Cloud_Test/abi_data_temp
 /Nighttime_Low_Cloud_Test/nohup.out
