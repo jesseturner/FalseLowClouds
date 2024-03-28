@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-date="20230907"
+date="20230915"
 time="00" # hh
 julian=$(date -d "$date" +%j)
 
